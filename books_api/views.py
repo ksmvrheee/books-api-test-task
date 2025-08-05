@@ -14,7 +14,6 @@ class BookViewSet(mixins.ListModelMixin, mixins.CreateModelMixin,
     - POST /books/ - create a book by specifying it's title, author's
         name and a year of publishing.
     """
-    queryset = Book.objects.all()
     serializer_class = BookSerializer
 
     def get_queryset(self):
